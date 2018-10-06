@@ -342,8 +342,10 @@ public static String url1;
 
                 }
 
+
                 @Override
-                public void onFinish() {
+                public void onFinish()
+                {
                     Properties prop = new Properties();
                     prop.put("mail.smtp.host", "smtp.gmail.com");
                     prop.put("mail.smtp.socketFactory.port", "465");
@@ -377,7 +379,8 @@ public static String url1;
 
 
 
-        } catch (Exception e) {
+        } catch (Exception e)
+        {
 
         }
 

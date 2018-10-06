@@ -279,13 +279,13 @@ public class MainActivity extends AppCompatActivity implements
         textView2.setText("Y: " + sensorEvent.values[1]);
         textView3.setText("Z: " + sensorEvent.values[2]);
         try{
-        if (sensorEvent.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
-            double x = sensorEvent.values[0];
-            double y = sensorEvent.values[1];
-            double z = sensorEvent.values[2];
-            double acc = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2) + Math.pow(z, 2));
-            DecimalFormat precision = new DecimalFormat(("0.00"));
-            double acceleration = Double.parseDouble(precision.format(acc));
+             if (sensorEvent.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
+                     double x = sensorEvent.values[0];
+                     double y = sensorEvent.values[1];
+                     double z = sensorEvent.values[2];
+                    double acc = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2) + Math.pow(z, 2));
+                    DecimalFormat precision = new DecimalFormat(("0.00"));
+                    double acceleration = Double.parseDouble(precision.format(acc));
             if (lol1 && acceleration < 1.35d || acceleration > 34.20d) {
                 lol1 = false;
                 //  Intent intent=new Intent();
